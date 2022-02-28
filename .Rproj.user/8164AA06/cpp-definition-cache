@@ -1,0 +1,223 @@
+[
+    {
+        "file": "/home/patrick/Research/mvn_region/epmgpr/src/axisepmgp.cpp",
+        "file_last_write": 1646002702.0,
+        "definitions": [
+            {
+                "usr": "c:@F@axisepmgp#$@N@arma@S@Col>#d#$@N@arma@S@Mat>#d#S0_#S0_#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "axisepmgp(arma::vec, arma::mat, arma::vec, arma::vec)",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/axisepmgp.cpp",
+                "line": 6,
+                "column": 12
+            }
+        ]
+    },
+    {
+        "file": "/home/patrick/Research/mvn_region/epmgpr/src/epmgp.cpp",
+        "file_last_write": 1620098852.0,
+        "definitions": [
+            {
+                "usr": "c:@F@epmgp#$@N@arma@S@Col>#d#$@N@arma@S@Mat>#d#S1_#S0_#S0_#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "epmgp(arma::vec, arma::mat, arma::mat, arma::vec, arma::vec, int)",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/epmgp.cpp",
+                "line": 6,
+                "column": 12
+            }
+        ]
+    },
+    {
+        "file": "/home/patrick/Research/mvn_region/epmgpr/src/epmh.cpp",
+        "file_last_write": 1603689988.0,
+        "definitions": [
+            {
+                "usr": "c:@F@sample_epmh#I#$@N@arma@S@Col>#d#$@N@arma@S@Mat>#d#S1_#S0_#S0_#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "sample_epmh(int, arma::vec, arma::mat, arma::mat, arma::vec, arma::vec)",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/epmh.cpp",
+                "line": 4,
+                "column": 11
+            }
+        ]
+    },
+    {
+        "file": "/home/patrick/Research/mvn_region/epmgpr/src/epmh.h",
+        "file_last_write": 1603689981.0,
+        "definitions": [
+            {
+                "usr": "c:@S@EPMH",
+                "kind": 2,
+                "parent_name": "",
+                "name": "EPMH",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/epmh.h",
+                "line": 6,
+                "column": 7
+            }
+        ]
+    },
+    {
+        "file": "/home/patrick/Research/mvn_region/epmgpr/src/tmvn_sampler.cpp",
+        "file_last_write": 1603916449.0,
+        "definitions": [
+            {
+                "usr": "c:@S@TmvnSampler@F@lpdf_tmvn#&1$@N@arma@S@Col>#d#",
+                "kind": 7,
+                "parent_name": "TmvnSampler",
+                "name": "lpdf_tmvn(const arma::vec &)",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/tmvn_sampler.cpp",
+                "line": 3,
+                "column": 21
+            }
+        ]
+    },
+    {
+        "file": "/home/patrick/Research/mvn_region/epmgpr/src/tmvn_sampler.h",
+        "file_last_write": 1603567593.0,
+        "definitions": [
+            {
+                "usr": "c:@S@TmvnSampler",
+                "kind": 2,
+                "parent_name": "",
+                "name": "TmvnSampler",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/tmvn_sampler.h",
+                "line": 7,
+                "column": 7
+            }
+        ]
+    },
+    {
+        "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
+        "file_last_write": 1604806484.0,
+        "definitions": [
+            {
+                "usr": "c:@F@range_intersection#$@N@arma@S@Col>#d#S0_#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "range_intersection(arma::vec, arma::vec)",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
+                "line": 8,
+                "column": 11
+            },
+            {
+                "usr": "c:@F@simulate#$@N@arma@S@Col>#d#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "simulate(arma::vec)",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
+                "line": 62,
+                "column": 8
+            },
+            {
+                "usr": "c:@S@ThreshRegion@F@eval#1d#",
+                "kind": 7,
+                "parent_name": "ThreshRegion",
+                "name": "eval(const double)",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
+                "line": 91,
+                "column": 22
+            },
+            {
+                "usr": "c:@S@UniformEPESS@F@wall_hitting#&1$@N@arma@S@Col>#d#",
+                "kind": 7,
+                "parent_name": "UniformEPESS",
+                "name": "wall_hitting(const arma::vec &)",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
+                "line": 101,
+                "column": 25
+            },
+            {
+                "usr": "c:@S@UniformEPESS@F@sample#",
+                "kind": 7,
+                "parent_name": "UniformEPESS",
+                "name": "sample",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
+                "line": 142,
+                "column": 25
+            },
+            {
+                "usr": "c:@S@UniformEPESS@F@pseudo_llik#&1$@N@arma@S@Col>#d#",
+                "kind": 7,
+                "parent_name": "UniformEPESS",
+                "name": "pseudo_llik(const arma::vec &)",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
+                "line": 311,
+                "column": 22
+            },
+            {
+                "usr": "c:@F@sample_epess#I#$@N@arma@S@Col>#d#$@N@arma@S@Mat>#d#S1_#S0_#I#I#S0_#b#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "sample_epess(int, arma::vec, arma::mat, arma::mat, arma::vec, int, int, arma::vec, bool)",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
+                "line": 323,
+                "column": 11
+            },
+            {
+                "usr": "c:@F@test_wall_hit#$@N@arma@S@Col>#d#S0_#S0_#$@N@arma@S@Mat>#d#S1_#S0_#I#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "test_wall_hit(arma::vec, arma::vec, arma::vec, arma::mat, arma::mat, arma::vec, int, int)",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
+                "line": 345,
+                "column": 11
+            }
+        ]
+    },
+    {
+        "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.h",
+        "file_last_write": 1603946410.0,
+        "definitions": [
+            {
+                "usr": "c:@S@UniformEPESS",
+                "kind": 2,
+                "parent_name": "",
+                "name": "UniformEPESS",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.h",
+                "line": 6,
+                "column": 7
+            },
+            {
+                "usr": "c:@S@ThreshRegion",
+                "kind": 2,
+                "parent_name": "",
+                "name": "ThreshRegion",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.h",
+                "line": 29,
+                "column": 7
+            }
+        ]
+    },
+    {
+        "file": "/home/patrick/Research/mvn_region/epmgpr/src/util.cpp",
+        "file_last_write": 1616873226.0,
+        "definitions": [
+            {
+                "usr": "c:@F@erfcx#d#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "erfcx(double)",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/util.cpp",
+                "line": 6,
+                "column": 8
+            },
+            {
+                "usr": "c:@F@trunc_norm_moments#$@N@arma@S@Col>#d#S0_#S0_#S0_#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "trunc_norm_moments(arma::vec, arma::vec, arma::vec, arma::vec)",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/util.cpp",
+                "line": 72,
+                "column": 12
+            }
+        ]
+    },
+    {
+        "file": "/home/patrick/Research/mvn_region/epmgpr/src/util.h",
+        "file_last_write": 1601593657.0,
+        "definitions": []
+    }
+]
