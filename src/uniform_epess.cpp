@@ -98,6 +98,9 @@ double ThreshRegion::eval(const double x) {
   return val;
 }
 
+/*
+ * 
+ */
 arma::vec UniformEPESS::wall_hitting(const arma::vec & nu) {
   arma::vec a = nu;
   arma::vec b = this->curr_sample;
@@ -310,13 +313,16 @@ arma::mat UniformEPESS::sample() {
 
 double UniformEPESS::pseudo_llik(const arma::vec & x) {
   
-  arma::vec q = this->ep_chol_inv * x;
+  arma::vec q = this->ep_chol_inv.t() * x;
   double lpdf_prior =  
     -.5 * arma::as_scalar(
-        arma::dot(q, q) + this->dim*std::log(2*arma::datum::pi) +
-        2 * arma::sum(arma::log(arma::diagvec(this->ep_chol))) );
+        arma::dot(q, q) + 
+        this->dim * std::log(2*arma::datum::pi) +
+        2 * arma::sum(arma::log(arma::diagvec(this->ep_chol))) 
+    );
   
   return this->lpdf_tmvn(x + this->ep_mean) - lpdf_prior;
+  // return this->lpdf_tmvn(x + this->ep_mean) - lpdf_prior;
 }
 
 // [[Rcpp::export]]

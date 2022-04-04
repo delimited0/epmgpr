@@ -11,10 +11,12 @@ public:
   int J;  // number of thresholds per ellipse
   int N;  // number of samples per angle proposal range
   
+  // ep_chol is UPPER Cholesky factor
   UniformEPESS(arma::vec initial, arma::vec ep_mean, arma::mat ep_chol, 
                arma::mat F, arma::vec g, int J, int N) : 
     curr_sample(initial), J(J), N(N), TmvnSampler(F, g, ep_mean, ep_chol) {
     
+    arma::mat ep_chol_inv = arma::inv(ep_chol);
     ep_cov_inv = ep_chol_inv * ep_chol_inv.t();
     curr_log_like = this->pseudo_llik(initial);
   }

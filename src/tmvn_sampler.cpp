@@ -8,6 +8,8 @@ double TmvnSampler::lpdf_tmvn(const arma::vec & x) {
   if (arma::any(eval < 0))
     log_density = -arma::datum::inf;
   else {
+    // arma::vec Q = this->ep_chol_inv.t() * x;
+    // double q = arma::dot(Q, Q);
     double q = arma::dot(x, x);
     double c = this->dim * std::log(2. * arma::datum::pi);
     log_density = -(c + q) / 2.;

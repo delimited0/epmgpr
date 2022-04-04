@@ -61,7 +61,7 @@
     },
     {
         "file": "/home/patrick/Research/mvn_region/epmgpr/src/tmvn_sampler.cpp",
-        "file_last_write": 1603916449.0,
+        "file_last_write": 1649023471.0,
         "definitions": [
             {
                 "usr": "c:@S@TmvnSampler@F@lpdf_tmvn#&1$@N@arma@S@Col>#d#",
@@ -91,7 +91,7 @@
     },
     {
         "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
-        "file_last_write": 1604806484.0,
+        "file_last_write": 1649024047.0,
         "definitions": [
             {
                 "usr": "c:@F@range_intersection#$@N@arma@S@Col>#d#S0_#",
@@ -126,7 +126,7 @@
                 "parent_name": "UniformEPESS",
                 "name": "wall_hitting(const arma::vec &)",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
-                "line": 101,
+                "line": 104,
                 "column": 25
             },
             {
@@ -135,7 +135,7 @@
                 "parent_name": "UniformEPESS",
                 "name": "sample",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
-                "line": 142,
+                "line": 145,
                 "column": 25
             },
             {
@@ -144,7 +144,7 @@
                 "parent_name": "UniformEPESS",
                 "name": "pseudo_llik(const arma::vec &)",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
-                "line": 311,
+                "line": 314,
                 "column": 22
             },
             {
@@ -153,7 +153,7 @@
                 "parent_name": "",
                 "name": "sample_epess(int, arma::vec, arma::mat, arma::mat, arma::vec, int, int, arma::vec, bool)",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
-                "line": 323,
+                "line": 329,
                 "column": 11
             },
             {
@@ -162,14 +162,14 @@
                 "parent_name": "",
                 "name": "test_wall_hit(arma::vec, arma::vec, arma::vec, arma::mat, arma::mat, arma::vec, int, int)",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
-                "line": 345,
+                "line": 351,
                 "column": 11
             }
         ]
     },
     {
         "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.h",
-        "file_last_write": 1603946410.0,
+        "file_last_write": 1649010857.0,
         "definitions": [
             {
                 "usr": "c:@S@UniformEPESS",
@@ -186,7 +186,7 @@
                 "parent_name": "",
                 "name": "ThreshRegion",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.h",
-                "line": 29,
+                "line": 31,
                 "column": 7
             }
         ]

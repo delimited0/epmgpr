@@ -1,9 +1,0 @@
-
-# symmetric covariance ----------------------------------------------------
-d = 2
-mu = rep(0, d)
-Sigma = .5 * diag(d) + .5 * rep(1, d) %*% t(rep(1, d))
-lb = rep(0, d)
-ub = rep(Inf, d)
-epmgpr::axisepmgp(mu, Sigma, lb, ub)
-
