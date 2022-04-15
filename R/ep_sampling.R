@@ -13,11 +13,11 @@ get_polytope_constraints <- function(lb, ub, A, mu, L) {
 }
 
 
-#' @param N number of samples to draw uniformly per threshold level
-#' @param J number of slices per iteration (recycling)
+#' @param n_perthresh number of samples to draw uniformly per threshold level
+#' @param n_slices number of slices per iteration (recycling)
 #' @export
-rtmvn <- function(n, mu, Sigma, lb, ub, A = NULL, method = "epess", initial = NULL,
-                  N = 1, J = 1, verbose = FALSE, burnin = 0) {
+rtmvn <- function(n, mu, Sigma, lb, ub, A = NULL, initial = NULL,
+                  n_perthresh = 1, n_slices = 1, verbose = FALSE, burnin = 0) {
   
   L <- t(chol(Sigma))
   d <- length(mu)
@@ -39,7 +39,7 @@ rtmvn <- function(n, mu, Sigma, lb, ub, A = NULL, method = "epess", initial = NU
   total_samples = n + burnin
   std_samples = t( sample_epess(total_samples, moments$mu, chol(moments$Sigma), 
                              pc$A, pc$b,
-                             J, N, initial, verbose) )
+                             n_slices, n_perthresh, initial, verbose) )
   
   # discard burn in samples
   std_samples = std_samples[(burnin+1):total_samples, ]
@@ -51,8 +51,6 @@ rtmvn <- function(n, mu, Sigma, lb, ub, A = NULL, method = "epess", initial = NU
   samples = std_samples %*% t(L) + matrix(rep(mu, n), nrow = n, byrow = TRUE)
   
   return(samples)
-  # rpolytmvn(n, mu, Sigma, constraints$A, b = constraints$b, lb, ub, 
-  #           method, initial, L, N, J, verbose)
 }
 
 
