@@ -75,7 +75,6 @@ rpolytmvn <- function(n, mu, Sigma, A, b = NULL, lb, ub, method = "epess",
                                   J, N, initial, verbose))
   }
   
-  browser()
   samples <- std_samples %*% t(L) + 
     # matrix(rep(mu + moments$mu, n), nrow = n, byrow = TRUE)
     matrix(rep(mu, n), nrow = n, byrow = TRUE)
