@@ -5,6 +5,14 @@ axisepmgp <- function(m, K, lb, ub) {
     .Call(`_epmgpr_axisepmgp`, m, K, lb, ub)
 }
 
+didactic_axisepmgp <- function(m, K, lb, ub, max_steps) {
+    .Call(`_epmgpr_didactic_axisepmgp`, m, K, lb, ub, max_steps)
+}
+
+didactic_epmgp <- function(m, K, C, lb, ub, max_steps) {
+    .Call(`_epmgpr_didactic_epmgp`, m, K, C, lb, ub, max_steps)
+}
+
 epmgp <- function(m, K, C, lb, ub, max_steps) {
     .Call(`_epmgpr_epmgp`, m, K, C, lb, ub, max_steps)
 }

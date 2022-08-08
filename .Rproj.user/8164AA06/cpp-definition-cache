@@ -10,9 +10,38 @@
                 "name": "axisepmgp(arma::vec, arma::mat, arma::vec, arma::vec)",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/axisepmgp.cpp",
                 "line": 6,
-                "column": 12
+                "column": 12,
+                "hidden": false
             }
-        ]
+        ],
+        "hidden": false
+    },
+    {
+        "file": "/home/patrick/Research/mvn_region/epmgpr/src/didactic_epmgp.cpp",
+        "file_last_write": 1659917976.0,
+        "definitions": [
+            {
+                "usr": "c:@F@didactic_axisepmgp#$@N@arma@S@Col>#d#$@N@arma@S@Mat>#d#S0_#S0_#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "didactic_axisepmgp(arma::vec, arma::mat, arma::vec, arma::vec, int)",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/didactic_epmgp.cpp",
+                "line": 6,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@didactic_epmgp#$@N@arma@S@Col>#d#$@N@arma@S@Mat>#d#S1_#S0_#S0_#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "didactic_epmgp(arma::vec, arma::mat, arma::mat, arma::vec, arma::vec, int)",
+                "file": "/home/patrick/Research/mvn_region/epmgpr/src/didactic_epmgp.cpp",
+                "line": 151,
+                "column": 12,
+                "hidden": false
+            }
+        ],
+        "hidden": false
     },
     {
         "file": "/home/patrick/Research/mvn_region/epmgpr/src/epmgp.cpp",
@@ -25,9 +54,11 @@
                 "name": "epmgp(arma::vec, arma::mat, arma::mat, arma::vec, arma::vec, int)",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/epmgp.cpp",
                 "line": 6,
-                "column": 12
+                "column": 12,
+                "hidden": false
             }
-        ]
+        ],
+        "hidden": false
     },
     {
         "file": "/home/patrick/Research/mvn_region/epmgpr/src/epmh.cpp",
@@ -40,9 +71,11 @@
                 "name": "sample_epmh(int, arma::vec, arma::mat, arma::mat, arma::vec, arma::vec)",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/epmh.cpp",
                 "line": 4,
-                "column": 11
+                "column": 11,
+                "hidden": false
             }
-        ]
+        ],
+        "hidden": false
     },
     {
         "file": "/home/patrick/Research/mvn_region/epmgpr/src/epmh.h",
@@ -55,9 +88,11 @@
                 "name": "EPMH",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/epmh.h",
                 "line": 6,
-                "column": 7
+                "column": 7,
+                "hidden": false
             }
-        ]
+        ],
+        "hidden": false
     },
     {
         "file": "/home/patrick/Research/mvn_region/epmgpr/src/tmvn_sampler.cpp",
@@ -70,9 +105,11 @@
                 "name": "lpdf_tmvn(const arma::vec &)",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/tmvn_sampler.cpp",
                 "line": 3,
-                "column": 21
+                "column": 21,
+                "hidden": false
             }
-        ]
+        ],
+        "hidden": false
     },
     {
         "file": "/home/patrick/Research/mvn_region/epmgpr/src/tmvn_sampler.h",
@@ -85,9 +122,11 @@
                 "name": "TmvnSampler",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/tmvn_sampler.h",
                 "line": 7,
-                "column": 7
+                "column": 7,
+                "hidden": false
             }
-        ]
+        ],
+        "hidden": false
     },
     {
         "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
@@ -100,7 +139,8 @@
                 "name": "range_intersection(arma::vec, arma::vec)",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
                 "line": 8,
-                "column": 11
+                "column": 11,
+                "hidden": false
             },
             {
                 "usr": "c:@F@simulate#$@N@arma@S@Col>#d#",
@@ -109,7 +149,8 @@
                 "name": "simulate(arma::vec)",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
                 "line": 62,
-                "column": 8
+                "column": 8,
+                "hidden": false
             },
             {
                 "usr": "c:@S@ThreshRegion@F@eval#1d#",
@@ -118,7 +159,8 @@
                 "name": "eval(const double)",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
                 "line": 91,
-                "column": 22
+                "column": 22,
+                "hidden": false
             },
             {
                 "usr": "c:@S@UniformEPESS@F@wall_hitting#&1$@N@arma@S@Col>#d#",
@@ -127,7 +169,8 @@
                 "name": "wall_hitting(const arma::vec &)",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
                 "line": 104,
-                "column": 25
+                "column": 25,
+                "hidden": false
             },
             {
                 "usr": "c:@S@UniformEPESS@F@sample#",
@@ -136,7 +179,8 @@
                 "name": "sample",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
                 "line": 145,
-                "column": 25
+                "column": 25,
+                "hidden": false
             },
             {
                 "usr": "c:@S@UniformEPESS@F@pseudo_llik#&1$@N@arma@S@Col>#d#",
@@ -145,7 +189,8 @@
                 "name": "pseudo_llik(const arma::vec &)",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
                 "line": 314,
-                "column": 22
+                "column": 22,
+                "hidden": false
             },
             {
                 "usr": "c:@F@sample_epess#I#$@N@arma@S@Col>#d#$@N@arma@S@Mat>#d#S1_#S0_#I#I#S0_#b#",
@@ -154,7 +199,8 @@
                 "name": "sample_epess(int, arma::vec, arma::mat, arma::mat, arma::vec, int, int, arma::vec, bool)",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
                 "line": 329,
-                "column": 11
+                "column": 11,
+                "hidden": false
             },
             {
                 "usr": "c:@F@test_wall_hit#$@N@arma@S@Col>#d#S0_#S0_#$@N@arma@S@Mat>#d#S1_#S0_#I#I#",
@@ -163,9 +209,11 @@
                 "name": "test_wall_hit(arma::vec, arma::vec, arma::vec, arma::mat, arma::mat, arma::vec, int, int)",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.cpp",
                 "line": 351,
-                "column": 11
+                "column": 11,
+                "hidden": false
             }
-        ]
+        ],
+        "hidden": false
     },
     {
         "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.h",
@@ -178,7 +226,8 @@
                 "name": "UniformEPESS",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.h",
                 "line": 6,
-                "column": 7
+                "column": 7,
+                "hidden": false
             },
             {
                 "usr": "c:@S@ThreshRegion",
@@ -187,9 +236,11 @@
                 "name": "ThreshRegion",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/uniform_epess.h",
                 "line": 31,
-                "column": 7
+                "column": 7,
+                "hidden": false
             }
-        ]
+        ],
+        "hidden": false
     },
     {
         "file": "/home/patrick/Research/mvn_region/epmgpr/src/util.cpp",
@@ -202,7 +253,8 @@
                 "name": "erfcx(double)",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/util.cpp",
                 "line": 6,
-                "column": 8
+                "column": 8,
+                "hidden": false
             },
             {
                 "usr": "c:@F@trunc_norm_moments#$@N@arma@S@Col>#d#S0_#S0_#S0_#",
@@ -211,13 +263,16 @@
                 "name": "trunc_norm_moments(arma::vec, arma::vec, arma::vec, arma::vec)",
                 "file": "/home/patrick/Research/mvn_region/epmgpr/src/util.cpp",
                 "line": 72,
-                "column": 12
+                "column": 12,
+                "hidden": false
             }
-        ]
+        ],
+        "hidden": false
     },
     {
         "file": "/home/patrick/Research/mvn_region/epmgpr/src/util.h",
         "file_last_write": 1601593657.0,
-        "definitions": []
+        "definitions": [],
+        "hidden": false
     }
 ]
