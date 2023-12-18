@@ -3,7 +3,8 @@
 const double EPS_CONVERGE = 1e-5;
 
 // [[Rcpp::export]]
-Rcpp::List axisepmgp(arma::vec m, arma::mat K, arma::vec lb, arma::vec ub) {
+Rcpp::List axisepmgp(arma::vec m, arma::mat K, arma::vec lb, arma::vec ub, 
+                     int max_steps) {
   
   arma::vec nu_site = arma::zeros(K.n_rows);
   arma::vec tau_site = arma::zeros(K.n_rows);
@@ -33,16 +34,13 @@ Rcpp::List axisepmgp(arma::vec m, arma::mat K, arma::vec lb, arma::vec ub) {
   arma::vec sigma_hat;
   arma::vec mu_hat;
   
-  while (!converged) {
+  while (!converged && k <= max_steps) {
     
     // Rcpp::Rcout << "Iteration " << k << " ==========" << std::endl;
     
     // make cavity distribution
     tau_cavity = 1 / arma::diagvec(Sigma) - tau_site;
     nu_cavity = mu / arma::diagvec(Sigma) - nu_site;
-    
-    // Rcpp::Rcout << "tau_cavity: " << tau_cavity << std::endl;
-    // Rcpp::Rcout << "nu_cavity: " << nu_cavity << std::endl;
     
     // compute moments using truncated normals
     Rcpp::List moments = trunc_norm_moments(lb, ub, nu_cavity / tau_cavity, 1 / tau_cavity);

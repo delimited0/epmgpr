@@ -184,11 +184,19 @@ aug_nugget_pmvn <- function(mu, Sigma, lb, ub, A, nugget = 1e-5,
 }
 
 #' @export
-moments <- function(lb, ub, mu, Sigma) {
-  result <- axisepmgp(mu, Sigma, lb, ub)
+moments <- function(mu, Sigma, lb, ub, max_steps = 200) {
+  result <- axisepmgp(mu, Sigma, lb, ub, max_steps)
   return(result)
 }
 
+#' Compute the moments of a d dimensional truncated multivariate normal subject
+#' to r linear constraints.
+#' @param A r x d matrix of constraints
+#' @param max_steps maximum number of EP iterations (over all sites)
+#' @param mu d x 1 mean vector
+#' @param Sigma d x d covariance matrix
+#' @param lb r x 1 lower bound vector
+#' @param ub r x 1 upper bound vector
 #' @export
 moments2 <- function(mu, Sigma, lb, ub, A, max_steps = 200) {
   result <- epmgp(mu, Sigma, t(A), lb, ub, max_steps)

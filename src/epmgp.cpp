@@ -2,6 +2,10 @@
 
 const double EPS_CONVERGE = 1e-8;
 
+/*
+ * C is the constraint matrix, where the jth constraint is the jth column of C
+ */
+
 // [[Rcpp::export]]
 Rcpp::List epmgp(arma::vec m, arma::mat K, arma::mat C, arma::vec lb, arma::vec ub,
                  int max_steps) {
@@ -37,6 +41,8 @@ Rcpp::List epmgp(arma::vec m, arma::mat K, arma::mat C, arma::vec lb, arma::vec 
   
   while (!converged && k <= max_steps) {
     
+    // Rcpp::Rcout << "Hi" << std::endl;
+    
     restart_algorithm = false;
     
     for (int j = 0; j < p; j++) {
@@ -48,15 +54,12 @@ Rcpp::List epmgp(arma::vec m, arma::mat K, arma::mat C, arma::vec lb, arma::vec 
       nu_cavity(j) = 
         arma::dot(Cj, mu) / (arma::as_scalar(Cj.t() * Sigma * Cj)) -
         nu_site(j) / frac_terms(j);
-      
-      // Rcpp::Rcout << "Made cavity distribution" << std::endl;
-      // Rcpp::Rcout << "tau_cavity: " << tau_cavity << std::endl;
-      // Rcpp::Rcout << "nu_cavity: " << nu_cavity << std::endl;
 
       if (tau_cavity(j) <= 0) {
         // problem negative cavity updates
         restart_algorithm = true;
         damp_terms(j) = damp_terms(j) * damp_redamp;
+        // Rcpp::Rcout << "We are damping!" << std::endl;
         break;
       }
       
@@ -87,6 +90,7 @@ Rcpp::List epmgp(arma::vec m, arma::mat K, arma::mat C, arma::vec lb, arma::vec 
         break;
       }
       
+      // update site parameters
       delta_tau_site(j) = 
         damp_terms(j) * (frac_terms(j) * (1 / sigma_hat(j) - tau_cavity(j)) - tau_site(j));
       delta_nu_site(j) = 
@@ -104,6 +108,7 @@ Rcpp::List epmgp(arma::vec m, arma::mat K, arma::mat C, arma::vec lb, arma::vec 
         // if result negative, either due to numerical precision or error
         if (tau_site(j) > -1e-6)
           tau_site(j) = 0;
+        // Rcpp::Rcout << "setting to 0" << std::endl;
       }
       
       // update q(x) (Sigma and mu)
@@ -134,6 +139,7 @@ Rcpp::List epmgp(arma::vec m, arma::mat K, arma::mat C, arma::vec lb, arma::vec 
     
     // if sites are oscillating, restart everything
     if (restart_algorithm) {
+      // Rcpp::Rcout << "restarting" << std::endl;
       k = 1;
       converged = false;
       damp_terms = damp_redamp * damp_terms;
@@ -182,12 +188,7 @@ Rcpp::List epmgp(arma::vec m, arma::mat K, arma::mat C, arma::vec lb, arma::vec 
   Rcpp::List result = Rcpp::List::create(
     Rcpp::_["logZ"] = logz,
     Rcpp::_["mu"] = mu,
-    Rcpp::_["Sigma"] = Sigma,
-    Rcpp::_["logz_hat"] = logz_hat,
-    Rcpp::_["nu_cavity"] = nu_cavity,
-    Rcpp::_["tau_cavity"] = tau_cavity,
-    Rcpp::_["nu_site"] = nu_site,
-    Rcpp::_["tau_site"] = tau_site
+    Rcpp::_["Sigma"] = Sigma
   );
   
   return result;

@@ -1,3 +1,4 @@
+library(epmgpr)
 d = 2
 mu = rep(0, d)
 Sigma = .5 * diag(d) + .5 * rep(1, d) %*% t(rep(1, d))
@@ -10,6 +11,12 @@ orthant_lesson$tau_site_history
 orthant_lesson$nu_site_history
 orthant_lesson$tau_cavity_history
 orthant_lesson$nu_cavity_history
+
+
+estimate = axisepmgp(mu, Sigma, lb, ub, 200)
+estimate$logZ
+estimate$mu
+estimate$Sigma
 
 d = 2
 mu = rep(0, d)

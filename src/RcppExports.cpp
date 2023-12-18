@@ -12,8 +12,8 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
 // axisepmgp
-Rcpp::List axisepmgp(arma::vec m, arma::mat K, arma::vec lb, arma::vec ub);
-RcppExport SEXP _epmgpr_axisepmgp(SEXP mSEXP, SEXP KSEXP, SEXP lbSEXP, SEXP ubSEXP) {
+Rcpp::List axisepmgp(arma::vec m, arma::mat K, arma::vec lb, arma::vec ub, int max_steps);
+RcppExport SEXP _epmgpr_axisepmgp(SEXP mSEXP, SEXP KSEXP, SEXP lbSEXP, SEXP ubSEXP, SEXP max_stepsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -21,7 +21,8 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< arma::mat >::type K(KSEXP);
     Rcpp::traits::input_parameter< arma::vec >::type lb(lbSEXP);
     Rcpp::traits::input_parameter< arma::vec >::type ub(ubSEXP);
-    rcpp_result_gen = Rcpp::wrap(axisepmgp(m, K, lb, ub));
+    Rcpp::traits::input_parameter< int >::type max_steps(max_stepsSEXP);
+    rcpp_result_gen = Rcpp::wrap(axisepmgp(m, K, lb, ub, max_steps));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -164,7 +165,7 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_epmgpr_axisepmgp", (DL_FUNC) &_epmgpr_axisepmgp, 4},
+    {"_epmgpr_axisepmgp", (DL_FUNC) &_epmgpr_axisepmgp, 5},
     {"_epmgpr_didactic_axisepmgp", (DL_FUNC) &_epmgpr_didactic_axisepmgp, 5},
     {"_epmgpr_didactic_epmgp", (DL_FUNC) &_epmgpr_didactic_epmgp, 6},
     {"_epmgpr_epmgp", (DL_FUNC) &_epmgpr_epmgp, 6},
